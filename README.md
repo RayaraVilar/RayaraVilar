@@ -1,9 +1,12 @@
-Olá! Me chamo Rayara Vilar!
+## 👋 Olá! Sou Rayara Vilar, Frontend Developer!
 
-## 📊 GitHub Stats
-
-![Seu Nome GitHub's Stats](https://github-readme-stats.vercel.app/api?username=RayaraVilar&show_icons=true&theme=dark)
-
-## 📚 Top Linguagens
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=RayaraVilar&layout=compact&theme=dark)
+<table>
+  <tr>
+    <td>
+      <img src="https://github-readme-stats.vercel.app/api?username=RayaraVilar&show_icons=true&theme=dark" height="200"/>
+    </td>
+    <td>
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=RayaraVilar&layout=compact&theme=dark" height="200"/>
+    </td>
+  </tr>
+</table>
