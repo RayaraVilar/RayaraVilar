@@ -8,19 +8,23 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout the repository
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Generate the snake animation
+      - name: Generate Snake Animation
         uses: Platane/snk@v3
         with:
           github_user_name: RayaraVilar
           outputs: |
             dist/github-contribution-grid-snake.svg
 
-      - name: Commit and push animation
-        uses: EndBug/add-and-commit@v9
-        with:
-          add: "dist/github-contribution-grid-snake.svg"
-          message: "Generate snake animation"
+      - name: Push SVG to output branch
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git checkout -b output
+          git add dist/github-contribution-grid-snake.svg
+          git commit -m "Update snake animation"
+          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/RayaraVilar/RayaraVilar.git output --force
