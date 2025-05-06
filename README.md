@@ -1,4 +1,7 @@
-## 👋 Olá! Sou Rayara Vilar, Frontend Developer!
+## 👋 Hi! I'm Rayara Vilar, Frontend Developer!
+
+I'm a technology enthusiast
+Frontend developer student
 
 <table>
   <tr>
