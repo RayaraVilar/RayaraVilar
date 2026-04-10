@@ -3,17 +3,6 @@
 I'm a technology enthusiast<br>
 Ai Engineer<br>
 
-<table>
-  <tr>
-    <td>
-      <img src="https://github-readme-stats.vercel.app/api?username=RayaraVilar&show_icons=true&theme=dracula" height="200"/>
-    </td>
-    <td>
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=RayaraVilar&layout=compact&theme=dracula" height="200"/>
-    </td>
-  </tr>
-</table><br>
-
 <div style="display: inline_block"><br>
   <img align="center" alt="React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
   <img align="center" alt="JavaScript" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
