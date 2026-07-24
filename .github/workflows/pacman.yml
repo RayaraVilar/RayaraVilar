@@ -1,27 +1,30 @@
 name: Generate Pacman Contribution Graph
 
 on:
-  # Executa automaticamente todos os dias à meia-noite (UTC)
   schedule:
+    # Executa automaticamente todos os dias à meia-noite
     - cron: "0 0 * * *"
-  
-  # Permite rodar manualmente a qualquer momento pela aba Actions
   workflow_dispatch:
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+permissions:
+  contents: write
 
-      - name: Generate Pacman Contribution Graph
-        uses: Snkrmn/pacman-contribution-graph@v1.0.0
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Generate Pacman Graph
+        uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/pacman-contribution-graph.svg?palette=github-light&color_snake=#f1c40f
+            dist/pacman-contribution-graph-dark.svg?palette=github-dark&color_snake=#f1c40f
 
       - name: Push generated files to pacman-output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: pacman-output
           build_dir: dist
